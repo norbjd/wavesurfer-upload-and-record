@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 audioCtx.createMediaElementSource(audio).connect(dest);
 
                 const chunks = [];
-                const rec = new MediaRecorder(new MediaStream([audioStream.getAudioTracks()[0]]));
+                const rec = new MediaRecorder(audioStream);
                 rec.ondataavailable = (e) => {
                     chunks.push(e.data);
                 }
