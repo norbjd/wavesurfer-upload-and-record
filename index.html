@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>wavesurfer.js | Upload audio, play and record</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/3.3.0/wavesurfer.min.js"></script>
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <input id="upload" accept="audio/*" type="file">
+        <div id="waveform"></div>
+        <div id="controls" style="display: none;">
+            <button data-action="play">Play/Pause</button>
+            <button data-action="record">Record 5 seconds</button>
+        </div>
+    </body>
+</html>
