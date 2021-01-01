@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document
             .querySelector('[data-action="record"]')
             .addEventListener('click', () => {
-                const audioCtx = new AudioContext();
+                const audioCtx = wavesurfer.backend.getAudioContext();
                 const dest = audioCtx.createMediaStreamDestination();
                 const audioStream = dest.stream;
 
@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(() => {
                     rec.stop();
                     wavesurfer.stop();
-                    audioCtx.close();
                 }, 5 * 1000);
             });
     }
